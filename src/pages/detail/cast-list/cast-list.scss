@@ -1,0 +1,18 @@
+.cast {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(90px, 1fr));
+  gap: 1.5rem;
+  &__img {
+    padding-top: 160px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin-bottom: 1rem;
+  }
+  &__name {
+    font-size: 1.3rem;
+  }
+  span {
+    font-weight: 600;
+    font-size: 1.6rem;
+  }
+}

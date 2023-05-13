@@ -1,0 +1,87 @@
+@use '../../scss' as *;
+
+.detail__banner {
+  height: 50vh;
+  background-size: cover;
+  position: relative;
+  background-repeat: no-repeat;
+  background-position: center;
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, .5);
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    background-image: linear-gradient(to top, $body-bg, rgba($black, 0));
+  }
+}
+
+.detail {
+  &-content__container {
+    max-width: 1200px;
+    @include flex(start, start);
+    position: relative;
+    margin-top: -200px;
+    gap: 5rem;
+
+  }
+  &__poster {
+    background-size: cover;
+    background-position: center;
+    padding-top: 50%;
+    border-radius: $border-radius;
+    flex: 1;
+    @include mobile {
+      display: none;
+    }
+  }
+  &__info {
+    width: 65%;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    @include mobile {
+      width: 100%;
+    }
+    .btns {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+  }
+  &__title {
+    font-size: 5.7rem;
+    @include tablet {
+      font-size: 3.5rem;
+    }
+  }
+  &__overview {
+    font-size: 1.6rem;
+    line-height: 165%;
+  }
+  &__genres {
+    @include flex(centet, unset);
+    flex-wrap: wrap;
+    gap: 15px;
+    span {
+      font-size: 1.2rem;
+      font-weight: 600;
+      border-radius: $border-radius;
+      border: 2px solid $white;
+      padding: .5rem 1.5rem;
+      background-color: $black;
+    }
+  }
+}
+

@@ -1,0 +1,25 @@
+@use '../../scss' as *;
+
+.search-bar {
+  border-radius: $border-radius;
+  background-color: $black;
+  max-width: 500px;
+  width: 100%;
+  @include flex(center, unset);
+  .form {
+    width: 100%;
+    display: flex;
+  }
+  input {
+    background: transparent;
+    border: none;
+    padding: 1rem 2rem;
+    outline: none;
+    color: #fff;
+    font-family: $font-family;
+    width: 100%;
+  }
+  .search-btn {
+    padding: 1rem;
+  }
+}

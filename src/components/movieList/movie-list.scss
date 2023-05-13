@@ -1,0 +1,12 @@
+@use '../../scss/breakpoint' as *;
+
+
+.swiper-slide {
+  width: 15%;
+  @include tablet {
+    width: 30%;
+  }
+  @include mobile {
+    width: 40%;
+  }
+}

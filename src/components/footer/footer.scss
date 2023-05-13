@@ -1,0 +1,36 @@
+@use '../../scss' as *;
+
+.footer {
+  background: url('../../img/footer-bg.jpg') center;
+  background-size: cover;
+  padding: 10rem 0;
+  flex: 1 1 auto;
+  &__logo {
+    text-align: center;
+  }
+  &__container {
+    @include flex(center, space-between);
+    flex-wrap: wrap;
+  }
+  &__menu {
+    margin-bottom: 3rem;
+    li {
+      font-size: 2rem;
+      font-weight: 600;
+    }
+  }
+  &__logo {
+    @include flex(center, center);
+    font-weight: 600;
+  }
+  .logo__content {
+    font-size: 4rem;
+    width: 50px;
+    gap: 20px;
+    margin-bottom: 3rem;
+    @include flex(center, center);
+    @include mobile {
+      font-size: 2rem;
+    }
+  }
+}
